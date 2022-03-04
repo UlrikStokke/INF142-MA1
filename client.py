@@ -50,6 +50,13 @@ def client_program():
 
     print(available_champs)
 
+    champ_1 = client_socket.recv(1024).decode()
+    choice_1 = input(f"{champ_1}")
+    client_socket.send(choice_1.encode())
+    champ_2 = client_socket.recv(1024).decode()
+    choice_2 = input(f"{champ_2}")
+    client_socket.send(choice_2.encode())
+
    #while message.lower().strip() != 'bye':
     #    client_socket.send(message.encode())  # send message
      #   data = client_socket.recv(1024).decode()  # receive response

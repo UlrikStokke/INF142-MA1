@@ -37,5 +37,19 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     send_champions(champions, conn1)
     send_champions(champions, conn2)
 
+
+    conn1.sendall("Choose champion 1: ".encode())
+    champ_1_p1 = conn1.recv(1024)
+    print("Player 1 chose: " + str(champ_1_p1))
+    conn2.sendall("Choose champion 1: ".encode())
+    champ_1_p2 = conn2.recv(1024)
+    print("Player 2 chose: " + str(champ_1_p2))
+    conn1.sendall("Choose champion 2: ".encode())
+    champ_2_p1 = conn1.recv(1024)
+    print("Player 1 chose: " + str(champ_2_p1))
+    conn2.sendall("Choose champion 2: ".encode())
+    champ_2_p2 = conn2.recv(1024)
+    print("Player 2 chose: " + str(champ_2_p2))
+
     while True:
         data = conn1.recv(1024)
