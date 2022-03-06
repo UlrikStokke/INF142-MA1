@@ -7,3 +7,10 @@ Katina,20,50,30
 Asir,5,5,90
 Cactus,5,90,5
 Luanne,90,5,5
+Linn,70,20,10
+Svein,95,3,2
+Ulrik,1,1,98
+Emma,10,50,40
+Chris,5,75,20
+Robin,25,35,40
+Lise,10,20,70

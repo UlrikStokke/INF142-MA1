@@ -1,0 +1,1 @@
+# Red score then blue score. Most points win.
