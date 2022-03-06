@@ -139,6 +139,11 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     # Print a summary
     print_match_summary(match)
 
+    #client_socket.sendall(p1_c1.encode())
+    #client_socket.sendall(p1_c2.encode())
+    #client_socket.sendall(p2_c1.encode()) 
+    #client_socket.sendall(p2_c2.encode())    
+
     conn1.sendall(pickle.dumps(match))
     conn2.sendall(pickle.dumps(match))
     client_socket.sendall(pickle.dumps(match))

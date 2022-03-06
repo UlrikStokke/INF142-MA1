@@ -73,6 +73,11 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
     print("DB server waiting for game results.")
 
+    #red_team_c1 = conn.recv(4098).decode()
+    #red_team_c2 = conn.recv(4098).decode()
+    #blue_team_c1 = conn.recv(4098).decode()
+    #blue_team_c2 = conn.recv(4098).decode()
+
     match = pickle.loads(conn.recv(4098))
 
     print_match_summary(match)
@@ -83,7 +88,14 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         if len(data) > 0 :
             f.write("\n")
         red_score, blue_score = match.score
-        f.write(f"{red_score},{blue_score}")
+        if red_score > blue_score:
+            result = "Red victory!"
+        elif red_score < blue_score:
+            result = "Blue victory!"
+        else:
+            result = "It's a tie!"
+        f.write(f"{red_score},{blue_score},{result}")
+        #f.write(f"{red_team_c1},{red_team_c2},{red_score},{blue_team_c1},{blue_team_c1},{blue_score},{result}")
 
     conn.close()
     print("The database server is shut down.")
