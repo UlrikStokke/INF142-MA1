@@ -87,8 +87,3 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 
     conn.close()
     print("The database server is shut down.")
-
-    #while True:
-        #TODO
-        # Add code for receiving match statistics and store it to file
-        #data = conn.recv(1024)
