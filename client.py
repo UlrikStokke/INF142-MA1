@@ -62,7 +62,7 @@ def client_program():
     print("Connected to server: " + host + " " + str(port))
 
     print("\n"
-          "Welcome to [bold yellow]Team Local Tactics[/bold yellow]!"
+          "Welcome to [bold yellow]Team Network Tactics[/bold yellow]!"
           "\n"
           "Each player choose a champion each time."
           "\n")
